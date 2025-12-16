@@ -7,7 +7,11 @@ export interface Props {
   description?: string;
 }
 
-const { title, canonicalUrl, description = "Open-source alternative to Vercel, Heroku & Netlify. Self-host apps, databases & 280+ services on your own server." } = Astro.props;
+const {
+  title,
+  canonicalUrl,
+  description = "Open-source alternative to Vercel, Heroku & Netlify. Self-host apps, databases & 280+ services on your own server.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -56,18 +60,12 @@ const { title, canonicalUrl, description = "Open-source alternative to Vercel, H
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#ffc40d" />
     <meta name="theme-color" content="#ffffff" />
-    <meta
-      name="Description"
-      content={description}
-    />
+    <meta name="Description" content={description} />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@coolifyio" />
     <meta name="twitter:title" content="Coolify" />
-    <meta
-      name="twitter:description"
-      content={description}
-    />
+    <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
       content="https://cdn.coollabs.io/assets/coolify/og-image.png"
@@ -75,10 +73,7 @@ const { title, canonicalUrl, description = "Open-source alternative to Vercel, H
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://coolify.io" />
     <meta property="og:title" content="Coolify" />
-    <meta
-      property="og:description"
-      content={description}
-    />
+    <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Coolify" />
     <meta
       property="og:image"
