@@ -1,0 +1,26 @@
+---
+const { title, description, link } = Astro.props;
+---
+
+<div class="flex flex-col">
+  <dt class="flex items-center gap-x-3 text-xl text-white">
+    <slot name="icon" />
+    {
+      link ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-warning decoration-2 underline-offset-4 hover:text-warning transition-colors"
+        >
+          {title}
+        </a>
+      ) : (
+        title
+      )
+    }
+  </dt>
+  <dd class="mt-4 flex flex-auto flex-col text-sm leading-6 text-neutral-400">
+    <p class="flex-auto">{description}</p>
+  </dd>
+</div>
